@@ -1,0 +1,1 @@
+ALTER TABLE `jadwal` ADD `email` varchar(255) NOT NULL;

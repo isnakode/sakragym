@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1718801384214,
+      "tag": "0000_bright_chat",
+      "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1718802378805,
+      "tag": "0001_redundant_glorian",
+      "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1718807065121,
+      "tag": "0002_late_kid_colt",
+      "breakpoints": false
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1718807116336,
+      "tag": "0003_aberrant_lila_cheney",
+      "breakpoints": false
+    }
+  ]
+}
