@@ -29,11 +29,16 @@ export const load: PageServerLoad = async ({ cookies }) => {
     .where(eq(tblUser.email, user.email))
     .limit(1)
 
-  return member[0]
+  const coach = await db
+    .select()
+    .from(tblUser)
+    .where(eq(tblUser.tipe, 'coach'))
+
+  return { member: member[0], coach }
 };
 
 export const actions: Actions = {
-  default: async ({ request, cookies }) => {
+  jadwal: async ({ request, cookies }) => {
     const sessionId = cookies.get('session') as string
     const user = getSession(sessionId)
     const form = await request.formData()
@@ -43,5 +48,16 @@ export const actions: Actions = {
     await db
       .insert(tblJadwal)
       .values({ email: user.email, hari: hari, jam })
-  }
+  },
+  coach: async ({ request, cookies }) => {
+    const sessionId = cookies.get('session') as string
+    const user = getSession(sessionId)
+    const form = await request.formData()
+
+    const emailCoach = form.get('coach') as string
+    await db
+      .update(tblUser)
+      .set({ emailCoach })
+      .where(eq(tblUser.email, user.email))
+  },
 };
