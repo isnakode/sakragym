@@ -4,7 +4,7 @@
   export let data;
 
   const datas = [
-    { nama: "nama", isi: data.nama },
+    { nama: "nama lengkap", isi: data.nama },
     { nama: "email", isi: data.email },
     { nama: "alamat", isi: data.alamat },
     { nama: "Nomer HP", isi: data.noHp },
