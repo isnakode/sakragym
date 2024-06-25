@@ -7,7 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"gen": "drizzle-kit generate",
-		"up": "drizzle-kit push",
+		"database": "drizzle-kit push",
 		"seed": "tsx ./src/data/seed.ts"
 	},
 	"devDependencies": {
